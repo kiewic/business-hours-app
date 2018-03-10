@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
-
-type dayOfWeekNumber = 0 | 1 | 2 | 3 | 4 | 5 | 6;
-
-interface ScheduleItem {
-  dayOfWeek: dayOfWeekNumber;
-  day: string;
-  hours: string;
-}
+import { ScheduleItem } from './ScheduleItem';
+import { dayOfWeekNumber } from './dayOfWeekNumber';
 
 @Component({
   selector: 'app-root',
@@ -15,17 +9,20 @@ interface ScheduleItem {
 })
 export class AppComponent {
   schedule: ScheduleItem[] = [
-    { dayOfWeek: 6, day: 'Saturday', hours: '7:00 AM to 9:00 PM' },
-    { dayOfWeek: 0, day: 'Sunday', hours: '7:00 AM to 9:00 PM' },
-    { dayOfWeek: 1, day: 'Monday', hours: '6:00 AM to 9:00 PM' },
-    { dayOfWeek: 2, day: 'Tuesday', hours: '6:00 AM to 9:00 PM' },
-    { dayOfWeek: 3, day: 'Wednesday', hours: '6:00 AM to 9:00 PM' },
-    { dayOfWeek: 4, day: 'Thursday', hours: '6:00 AM to 9:00 PM' },
-    { dayOfWeek: 5, day: 'Friday', hours: '6:00 AM to 9:00 PM' },
+    new ScheduleItem(6, 'Saturday',  '7:00 AM to 9:00 PM'),
+    new ScheduleItem(0, 'Sunday',    '7:00 AM to 9:00 PM'),
+    new ScheduleItem(1, 'Monday',    '6:00 AM to 9:00 PM'),
+    new ScheduleItem(2, 'Tuesday',   '6:00 AM to 9:00 PM'),
+    new ScheduleItem(3, 'Wednesday', '6:00 AM to 9:00 PM'),
+    new ScheduleItem(4, 'Thursday',  '6:00 AM to 9:00 PM'),
+    new ScheduleItem(5, 'Friday',    '6:00 AM to 9:00 PM'),
   ];
-  dayOfWeek: dayOfWeekNumber;
+  currentDay: dayOfWeekNumber;
 
   constructor() {
-    this.dayOfWeek = <dayOfWeekNumber>(new Date()).getDay();
+    this.currentDay = <dayOfWeekNumber>(new Date()).getDay();
+    for (let scheduleItem of this.schedule) {
+      scheduleItem.currentDay = this.currentDay;
+    }
   }
 }

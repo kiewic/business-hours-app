@@ -42,9 +42,9 @@
     <ul class="schedule___1YDJx">
       <li
         *ngFor="let scheduleItem of schedule"
-        [ngClass]="{scheduleItemHighlight___11MBC: dayOfWeek === scheduleItem.dayOfWeek}"
+        [ngClass]="{scheduleItemHighlight___11MBC: currentDay === scheduleItem.dayOfWeek}"
         class="scheduleItem___3FoQR">
-        <span class="scheduleDay___3gDDA">{{scheduleItem.day}}</span>
+        <span class="scheduleDay___3gDDA">{{scheduleItem.displayName}}</span>
         <span class="scheduleHours___3MGfi">{{scheduleItem.hours}}</span>
       </li>
     </ul>
