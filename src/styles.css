@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* originally it was body */
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #f7f7f7;
+    color: rgba(0,0,0,.87);
+    font-family: Gotham, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    letter-spacing: -.01em;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* originally it was html */
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}

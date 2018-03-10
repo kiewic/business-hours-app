@@ -1,0 +1,121 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, p, pre {
+    margin: 0;
+}
+
+/* originally .bg-white */
+section {
+    background-color: #fff!important;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.py5 {
+    padding-left: 24px;
+    padding-left: 2.4rem;
+    padding-right: 24px;
+    padding-right: 2.4rem;
+    padding-top: 32px;
+    padding-top: 3.2rem;
+    padding-bottom: 32px;
+    padding-bottom: 3.2rem;
+}
+
+.sb-heading--xxsmall {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 1.229;
+}
+
+.text-upper {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.text-bold {
+    font-weight: 700!important;
+}
+.mb2 {
+    margin-bottom: 8px!important;
+    margin-bottom: .8rem!important;
+}
+
+.color-textBlackSoft {
+    color: rgba(0,0,0,.56)!important;
+}
+
+.sb-rule {
+    border: 0;
+    margin: 0;
+}
+
+.pb4 {
+    padding-bottom: 24px!important;
+    padding-bottom: 2.4rem!important;
+}
+
+.sb-rule--thin:before {
+    border-top-width: 1px;
+}
+
+.sb-rule:before {
+    content: "";
+    display: block;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: rgba(0,0,0,.1);
+}
+
+.schedule___1YDJx {
+    display: table;
+    width: 100%;
+    max-width: 350px;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.flex-column {
+    -webkit-box-orient: vertical!important;
+    -webkit-box-direction: normal!important;
+    -ms-flex-direction: column!important;
+    flex-direction: column!important;
+}
+
+.scheduleDay___3gDDA, .scheduleHours___3MGfi {
+    display: table-cell;
+}
+
+.scheduleItemHighlight___11MBC {
+    font-weight: 700;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.scheduleItem___3FoQR:nth-of-type(n+2) .scheduleHours___3MGfi {
+    padding-top: 8px;
+}
+
+.scheduleHours___3MGfi {
+    text-align: right;
+}
+
+.scheduleDay___3gDDA, .scheduleHours___3MGfi {
+    display: table-cell;
+}
+
+.scheduleItem___3FoQR {
+    display: table-row;
+}
