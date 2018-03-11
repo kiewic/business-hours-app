@@ -23,6 +23,8 @@ export class AppComponent {
     this.currentDay = <dayOfWeekNumber>(new Date()).getDay();
     for (let scheduleItem of this.schedule) {
       scheduleItem.currentDay = this.currentDay;
+      scheduleItem.order = (scheduleItem.order + this.currentDay) % 7;
     }
+    this.schedule.sort((a: ScheduleItem, b: ScheduleItem): number => a.order - b.order);
   }
 }
