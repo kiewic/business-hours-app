@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { ScheduleItem } from './ScheduleItem';
 import { dayOfWeekNumber } from './dayOfWeekNumber';
+import { CalendarService } from './calendar.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [CalendarService]
 })
 export class AppComponent {
   schedule: ScheduleItem[] = [
@@ -19,8 +21,8 @@ export class AppComponent {
   ];
   currentDay: dayOfWeekNumber;
 
-  constructor() {
-    this.currentDay = <dayOfWeekNumber>(new Date()).getDay();
+  constructor(calendar: CalendarService) {
+    this.currentDay = calendar.getCurrentDay();
     for (let scheduleItem of this.schedule) {
       scheduleItem.currentDay = this.currentDay;
       scheduleItem.order = (scheduleItem.order + this.currentDay) % 7;
