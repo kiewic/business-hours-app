@@ -25,7 +25,7 @@ export class AppComponent {
     this.currentDay = calendar.getCurrentDay();
     for (let scheduleItem of this.schedule) {
       scheduleItem.currentDay = this.currentDay;
-      scheduleItem.order = (scheduleItem.order + this.currentDay) % 7;
+      scheduleItem.order = (scheduleItem.order + 7 - this.currentDay) % 7;
     }
     this.schedule.sort((a: ScheduleItem, b: ScheduleItem): number => a.order - b.order);
   }
